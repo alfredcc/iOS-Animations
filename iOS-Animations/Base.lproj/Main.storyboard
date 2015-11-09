@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -66,8 +67,37 @@
                     <view key="view" contentMode="scaleToFill" id="jeO-i4-xqm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1Ov-hX-mRW">
+                                <rect key="frame" x="36" y="468" width="248" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMF-b7-Fci">
+                                        <rect key="frame" x="47" y="0.0" width="155" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Animate With Duration"/>
+                                        <connections>
+                                            <action selector="annimationWithDuration:" destination="jNr-Jk-wjF" eventType="touchUpInside" id="r68-x0-8cW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaj-eW-SCk">
+                                        <rect key="frame" x="98" y="50" width="53" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Springs"/>
+                                        <connections>
+                                            <action selector="annimationWithSpring:" destination="jNr-Jk-wjF" eventType="touchUpInside" id="SBt-SY-yff"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1Ov-hX-mRW" firstAttribute="leading" secondItem="jeO-i4-xqm" secondAttribute="leadingMargin" constant="20" id="Vbe-hK-q7l"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1Ov-hX-mRW" secondAttribute="trailing" constant="20" id="m4C-4j-470"/>
+                            <constraint firstItem="ov0-3h-PSp" firstAttribute="top" secondItem="1Ov-hX-mRW" secondAttribute="bottom" constant="20" id="u9b-9n-f2R"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Base View Animation" id="hRh-l5-ou0"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
