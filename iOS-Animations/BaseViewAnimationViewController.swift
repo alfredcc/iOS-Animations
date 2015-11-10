@@ -46,5 +46,17 @@ class BaseViewAnimationViewController: UIViewController {
                 self.animationView.center.x -= self.view.bounds.width / 2
         }
     }
+  
+  @IBAction func transitionAnimation(sender: AnyObject) {
+    let newView = UIView(frame: CGRect(x: 20.0, y: view.bounds.height/4, width: 100.0, height: 100.0))
+    newView.center = view.center
+    newView.backgroundColor = UIColor.darkGrayColor()
+    UIView.transitionWithView(newView, duration: 1.0, options: [.CurveEaseOut, .TransitionCurlDown], animations: { () -> Void in
+      self.view.addSubview(newView)
+      }, completion: { _ in
+        newView.removeFromSuperview()
+    })
+  }
+  
     
 }
