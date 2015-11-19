@@ -68,8 +68,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1Ov-hX-mRW">
-                                <rect key="frame" x="36" y="418" width="248" height="130"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1Ov-hX-mRW">
+                                <rect key="frame" x="36" y="398" width="248" height="150"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMF-b7-Fci">
                                         <rect key="frame" x="46" y="0.0" width="155" height="30"/>
@@ -80,7 +80,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaj-eW-SCk">
-                                        <rect key="frame" x="97" y="50" width="53" height="30"/>
+                                        <rect key="frame" x="97" y="40" width="53" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Springs"/>
                                         <connections>
@@ -88,15 +88,25 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SKq-J8-AuD">
-                                        <rect key="frame" x="90" y="100" width="68" height="30"/>
+                                        <rect key="frame" x="90" y="80" width="68" height="30"/>
                                         <animations/>
                                         <state key="normal" title="Transition"/>
                                         <connections>
                                             <action selector="transitionAnimation:" destination="jNr-Jk-wjF" eventType="touchUpInside" id="1HD-tI-LYl"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yBe-gN-2Zb">
+                                        <rect key="frame" x="94" y="120" width="60" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Keyfame"/>
+                                        <connections>
+                                            <action selector="keyAnimation:" destination="jNr-Jk-wjF" eventType="touchUpInside" id="kpb-Dd-5DY"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.35294117650000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </stackView>
                         </subviews>
                         <animations/>
