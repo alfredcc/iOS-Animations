@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -43,6 +44,33 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Layer Animation" id="BQ3-Um-8qd">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="SrN-d2-T7E" style="IBUITableViewCellStyleDefault" id="Zwm-B2-LBG">
+                                        <rect key="frame" x="0.0" y="164" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zwm-B2-LBG" id="EWn-Nm-DsP">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Basic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SrN-d2-T7E">
+                                                    <rect key="frame" x="15" y="0.0" width="270" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <segue destination="77z-dv-4Xs" kind="show" id="OU9-n9-HM3"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="TJ7-gG-WjH" id="96G-Fz-FMW"/>
@@ -55,6 +83,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIh-L1-eag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="522" y="242"/>
+        </scene>
+        <!--Layer Animation View Controller-->
+        <scene sceneID="pJp-In-HaI">
+            <objects>
+                <viewController id="77z-dv-4Xs" customClass="LayerAnimationViewController" customModule="iOS_Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aNe-jV-BLI"/>
+                        <viewControllerLayoutGuide type="bottom" id="I3Y-36-7zQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YVw-5K-7po">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l99-tP-fSg">
+                                <rect key="frame" x="40" y="110" width="240" height="120"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.35294117650000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="I2b-cL-U20"/>
+                                    <constraint firstAttribute="height" constant="120" id="yAr-pO-Mlw"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="d47-xJ-fG6">
+                                <rect key="frame" x="16" y="330" width="288" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qhP-OZ-36L">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="position"/>
+                                        <connections>
+                                            <action selector="position:" destination="77z-dv-4Xs" eventType="touchUpInside" id="xq8-48-7CX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8u-FR-pmo">
+                                        <rect key="frame" x="0.0" y="40" width="288" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="opacity"/>
+                                        <connections>
+                                            <action selector="opacity:" destination="77z-dv-4Xs" eventType="touchUpInside" id="ta8-Fy-OvV"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0L-lY-xO9">
+                                        <rect key="frame" x="0.0" y="80" width="288" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="backgroundColoer"/>
+                                        <connections>
+                                            <action selector="backgroundColor:" destination="77z-dv-4Xs" eventType="touchUpInside" id="Lg7-l4-z8C"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d47-xJ-fG6" firstAttribute="top" secondItem="l99-tP-fSg" secondAttribute="bottom" constant="100" id="azc-EX-iPa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d47-xJ-fG6" secondAttribute="trailing" id="co8-Xe-jid"/>
+                            <constraint firstItem="l99-tP-fSg" firstAttribute="centerX" secondItem="YVw-5K-7po" secondAttribute="centerX" id="jAP-kg-ab2"/>
+                            <constraint firstItem="l99-tP-fSg" firstAttribute="centerY" secondItem="YVw-5K-7po" secondAttribute="centerY" multiplier="0.6" id="kqb-ZR-jxM"/>
+                            <constraint firstItem="d47-xJ-fG6" firstAttribute="leading" secondItem="YVw-5K-7po" secondAttribute="leadingMargin" id="luT-Ma-Tr1"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="animationView" destination="l99-tP-fSg" id="twS-nQ-qrS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQH-Sh-rlr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973" y="526"/>
         </scene>
         <!--Base View Animation-->
         <scene sceneID="gR8-tY-0xh">
@@ -122,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zdG-G6-Abk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="931" y="242"/>
+            <point key="canvasLocation" x="973" y="-115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oZw-5U-k7U">
